@@ -1,4 +1,6 @@
-﻿namespace Cobalt.Utils.TextUtils
+﻿using Cobalt.Extensions.StringExtensions;
+
+namespace Cobalt.Utils.TextUtils
 {
     public partial class TagReader
     {
@@ -11,22 +13,7 @@
         /// <returns>Value in tag</returns>
         public static string GetTagValue(string content, string tag)
         {
-            if (string.IsNullOrEmpty(content) || string.IsNullOrEmpty(tag))
-                return string.Empty;
-
-            var result = string.Empty;
-
-            if (content.ToLower().Contains(tag.ToLower()))
-            {
-                var startTag = $"<{tag}>";
-                var endTag = $"</{tag}>";
-                var startIndex = content.IndexOf(startTag) + startTag.Length;
-                var length = content.IndexOf(endTag) - startIndex;
-
-                result = content.Substring(startIndex, length);
-            }
-
-            return result;
+            return content.SubStringBetweenWords($"<{tag}>", $"</{tag}>");
         }
         
     }

@@ -49,6 +49,7 @@
     <Compile Include="Extensions\DataRowExtensions\AsIntegerExtension.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsStringExtension.cs" />
     <Compile Include="Extensions\StringExtensions\RemoveFromEndExtension.cs" />
+    <Compile Include="Extensions\StringExtensions\SubStringBetweenWordsExtension.cs" />
     <Compile Include="Extensions\StringExtensions\SubStringFromStartExtension.cs" />
     <Compile Include="Extensions\StringExtensions\SubStringFromEndExtension.cs" />
     <Compile Include="Generators\IdGeneratorFactory.cs" />

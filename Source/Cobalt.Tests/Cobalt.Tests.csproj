@@ -63,6 +63,7 @@
     <Compile Include="Extensions\DataRowExtensions\AsDoubleExtensionTests.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsDateTimeExtensionTests.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsBoolExtensionTests.cs" />
+    <Compile Include="Extensions\StringExtensions\SubStringBetweenWordsExtensionTests.cs" />
     <Compile Include="Extensions\StringExtensions\SubStringFromStartExtensionTests.cs" />
     <Compile Include="Extensions\StringExtensions\SubStringFromEndExtensionTests.cs" />
     <Compile Include="Extensions\StringExtensions\RemoveFromEndExtensionTests.cs" />
