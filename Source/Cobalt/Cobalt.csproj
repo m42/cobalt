@@ -57,6 +57,7 @@
     <Compile Include="Generators\IntIdGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Generators\IIdGenerator.cs" />
+    <Compile Include="Utils\TextUtils\TagReader.cs" />
     <Compile Include="Validators\EmailAddressValidator.cs" />
   </ItemGroup>
   <ItemGroup />
