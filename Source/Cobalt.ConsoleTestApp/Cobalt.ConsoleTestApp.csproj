@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67FE0F7C-B78E-4AF6-80B0-67CD727B066E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cobalt</RootNamespace>
-    <AssemblyName>Cobalt</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <ProjectGuid>{2C9D8288-5A1F-476D-BC5A-7D423AD222C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cobalt.ConsoleTestApp</RootNamespace>
+    <AssemblyName>Cobalt.ConsoleTestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,24 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleApp\ConsoleUtils.TimedMessage.cs" />
-    <Compile Include="Converters\CsvToDataTableConverter.cs" />
-    <Compile Include="Extensions\DataRowExtensions\AsBoolExtension.cs" />
-    <Compile Include="Extensions\DataRowExtensions\AsDateTimeExtension.cs" />
-    <Compile Include="Extensions\DataRowExtensions\AsDoubleExtension.cs" />
-    <Compile Include="Extensions\DataRowExtensions\AsIntegerExtension.cs" />
-    <Compile Include="Extensions\DataRowExtensions\AsStringExtension.cs" />
-    <Compile Include="Extensions\StringExtensions\RemoveFromEndExtension.cs" />
-    <Compile Include="Extensions\StringExtensions\SubStringFromStartExtension.cs" />
-    <Compile Include="Extensions\StringExtensions\SubStringFromEndExtension.cs" />
-    <Compile Include="Generators\IdGeneratorFactory.cs" />
-    <Compile Include="Generators\GuidIdGenerator.cs" />
-    <Compile Include="Generators\LongIdGenerator.cs" />
-    <Compile Include="Generators\IntIdGenerator.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Generators\IIdGenerator.cs" />
-    <Compile Include="Validators\EmailAddressValidator.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cobalt\Cobalt.csproj">
+      <Project>{67fe0f7c-b78e-4af6-80b0-67cd727b066e}</Project>
+      <Name>Cobalt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
