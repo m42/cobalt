@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Data;
-using System.IO;
 using System.Text.RegularExpressions;
 
 namespace Cobalt.Converters
 {
     public class CSVtoDataTableConverter
     {
-        public DataTable ConvertFromFile(string filePath)
-        {
-            var content = File.ReadAllText(filePath);
+        private readonly string Content;
 
-            return ConvertFromFileContent(content);
-        }
-
-        public DataTable ConvertFromFileContent(string content)
+        public CSVtoDataTableConverter(string content)
         {
-            if (String.IsNullOrEmpty(content))
+            if (string.IsNullOrEmpty(content))
                 throw new ArgumentNullException(nameof(content));
 
+            Content = content;
+        }
+
+        public DataTable Convert()
+        {
             char[] separators = { ',', ';' };
 
             var dataTable = new DataTable();
-            var lines = Regex.Split(content, "\r\n");
+            var lines = Regex.Split(Content, "\r\n");
 
             var headerRow = lines[0];
             var headers = headerRow.Split(separators);
@@ -36,7 +35,7 @@ namespace Cobalt.Converters
 
             for (int l = 1; l < lines.Length; l++)
             {
-                if (String.IsNullOrEmpty(lines[l]))
+                if (string.IsNullOrEmpty(lines[l]))
                     continue;
 
                 var row = lines[l];
@@ -53,6 +52,6 @@ namespace Cobalt.Converters
 
             return dataTable;
         }
-
+        
     }
 }
