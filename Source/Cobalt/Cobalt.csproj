@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="ConsoleApp\ConsoleUtils.TimedMessage.cs" />
     <Compile Include="Converters\CsvToDataTableConverter.cs" />
+    <Compile Include="Converters\DataTableToCsvConverter.cs" />
+    <Compile Include="Converters\DataTableToHtmlCardsConverter.cs" />
+    <Compile Include="Converters\DataTableToHtmlTableConverter.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsBoolExtension.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsDateTimeExtension.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsDoubleExtension.cs" />

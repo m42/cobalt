@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\CsvToDataTableConverterTests.cs" />
+    <Compile Include="Converters\DataTableToHtmlTableConverterTests.cs" />
+    <Compile Include="Converters\DataTableToCsvConverterTests.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsStringExtensionTests.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsIntegerExtensionTests.cs" />
     <Compile Include="Extensions\DataRowExtensions\AsDoubleExtensionTests.cs" />
